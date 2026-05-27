@@ -1,8 +1,17 @@
 const employees = [
   {
     id: 1,
+    firstname: "Rahul",
     email: "employee1@gmail.com",
     password: "123",
+
+    taskCounts: {
+      active: 2,
+      newTask: 1,
+      completed: 1,
+      failed: 0
+    },
+
     tasks: [
       {
         active: true,
@@ -39,8 +48,17 @@ const employees = [
 
   {
     id: 2,
+    firstname: "Amit",
     email: "employee2@gmail.com",
     password: "123",
+
+    taskCounts: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 1
+    },
+
     tasks: [
       {
         active: true,
@@ -77,8 +95,17 @@ const employees = [
 
   {
     id: 3,
+    firstname: "Sneha",
     email: "employee3@gmail.com",
     password: "123",
+
+    taskCounts: {
+      active: 2,
+      newTask: 1,
+      completed: 1,
+      failed: 0
+    },
+
     tasks: [
       {
         active: true,
@@ -115,8 +142,17 @@ const employees = [
 
   {
     id: 4,
+    firstname: "Priya",
     email: "employee4@gmail.com",
     password: "123",
+
+    taskCounts: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 1
+    },
+
     tasks: [
       {
         active: true,
@@ -153,8 +189,17 @@ const employees = [
 
   {
     id: 5,
+    firstname: "Karan",
     email: "employee5@gmail.com",
     password: "123",
+
+    taskCounts: {
+      active: 2,
+      newTask: 1,
+      completed: 1,
+      failed: 0
+    },
+
     tasks: [
       {
         active: true,
@@ -190,11 +235,14 @@ const employees = [
   }
 ];
 
-const admin = [{
-  id: 101,
-  email: "admin@gmail.com",
-  password: "123"
-}];
+const admin = [
+  {
+    id: 101,
+    firstname: "Admin",
+    email: "admin@gmail.com",
+    password: "123"
+  }
+];
 
 export const setLocalStorage = ()=>{
 localStorage.setItem('employees',JSON.stringify(employees))
