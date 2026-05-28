@@ -12,8 +12,8 @@ const AcceptTask = ({data}) => {
         <p className='text-white text-sm pt-2'>{data.description}
         </p>
         <div className='flex justify-between mt-4'>
-            <button className='py-1 px-2 text-sm bg-green-500 rounded'>Mark as completed</button>
-            <button className='py-1 px-2 text-sm bg-red-500 rounded'>Mark as failed</button>
+            <button className='text-white py-1 px-2 text-sm bg-green-500 rounded'>Mark as completed</button>
+            <button className='text-white py-1 px-2 text-sm bg-red-500 rounded'>Mark as failed</button>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ const FailedTask = ({data}) => {
         <p className='text-white text-sm pt-2'>{data.description}
         </p>
         <div className='mt-4' >
-            <button className='w-full text-sm rounded bg-green-500 py-1'>Failed</button>
+            <button className='text-white w-full text-sm rounded bg-green-500 py-1'>Failed</button>
         </div>
       </div>
        
