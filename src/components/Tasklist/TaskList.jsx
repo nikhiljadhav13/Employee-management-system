@@ -22,25 +22,8 @@ const TaskList = ({data}) => {
           return <FailedTask key={idx} data={elem}/>
         }
 })}
-      {/* <div className='shrink-0 bg-green-500 h-full w-[270px] rounded-xl p-5'>
-        <div className='flex justify-between  items-center text-white'>
-            <h2 className='py-1 px-3 bg-red-600 rounded text-sm font-medium '>High</h2>
-            <h3 className='text-sm '>12 feb 2026</h3>
-        </div>
-        <h2 className='mt-3 text-white text-lg font-semibold'>Make a youtube video </h2>
-        <p className='text-white text-sm pt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, voluptate! Lorem ipsum dolor sit amet.
-        </p>
-      </div>
       
-      <div className='shrink-0 bg-yellow-500 h-full w-[270px] rounded-xl p-5'>
-        <div className='flex justify-between  items-center text-white'>
-            <h2 className='py-1 px-3 bg-red-600 rounded text-sm font-medium '>High</h2>
-            <h3 className='text-sm '>12 feb 2026</h3>
-        </div>
-        <h2 className='mt-3 text-white text-lg font-semibold'>Make a youtube video </h2>
-        <p className='text-white text-sm pt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, voluptate! Lorem ipsum dolor sit amet.
-        </p>
-      </div> */}
+    
 
       
     </div>

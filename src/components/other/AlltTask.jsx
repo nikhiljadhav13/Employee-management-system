@@ -8,7 +8,7 @@ const AlltTask = () => {
   return (
     <div id='alltask' className='p-5 rounded bg-[#1c1c1c] mt-4'>
 
-      <div className='text-white flex mb-2 justify-around bg-red-400 py-1 px-4 rounded'>
+      <div className='text-white flex mb-2 justify-around bg-red-600 py-1 px-4 rounded'>
         <h2 className='font-bold'>Employee Name</h2>
         <h3 className='font-bold'>New Task</h3>
         <h3 className='font-bold'>Active</h3>
