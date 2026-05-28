@@ -1,5 +1,6 @@
 import React from "react";
-import { useState } from "react";
+import  { useContext, useState } from "react";
+import { AuthContext } from "../../context/AuthProvider";
 
 const CreateTask = () => {
   const [taskTitle, setTaskTitle] = useState("");
@@ -7,37 +8,47 @@ const CreateTask = () => {
   const [taskDiscription, setTaskDiscription] = useState("");
   const [category, setCategory] = useState("");
   const [assignto, setAssignto] = useState("");
-
-  const [newtask, setNewTask] = useState({});
+  const { userData, setUserData } = useContext(AuthContext)
 
   const submitHandler = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    setNewTask({
-      taskTitle,
-      taskDiscription,
-      taskDate,
-      category,
-      active: false,
-      newtTask: true,
-      completed: false,
-      failed: false,
-    });
-    const data = JSON.parse(localStorage.getItem("employees"));
-    data.forEach(function (elem) {
-      if (assignto == elem.firstname) {
-        elem.tasks.push(newtask);
-        console.log(elem)
-      }
-    });
-
-    setAssignto('')
-    setCategory('')
-    setTaskDiscription('')
-    setTaskTitle('')
-    setTaskDate('')
-
+  const newTask = {
+    taskTitle,
+    taskDiscription,
+    taskDate,
+    category,
+    active: false,
+   newTask: true,
+    completed: false,
+    failed: false,
   };
+
+  const data = JSON.parse(localStorage.getItem("employees"));
+data.forEach((elem) => {
+  if (assignto === elem.firstname) {
+
+    elem.tasks.push(newTask)
+    elem.taskCounts.newTask += 1
+    elem.taskCounts.active += 1
+  }
+})
+
+ localStorage.setItem("employees", JSON.stringify(data))
+
+setUserData({
+  ...userData,
+  employees: data
+})
+
+  setAssignto("");
+  setCategory("");
+  setTaskDiscription("");
+  setTaskTitle("");
+  setTaskDate("");
+
+  console.log(data);
+};
   return (
     <div>
       <div className="p-5 rounded mt-7 bg-[#1c1c1c]">

@@ -5,21 +5,25 @@ export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
 
-  const [userData, setUserData] = useState([]);
+  const [userData, setUserData] = useState({});
 
-  useEffect(()=>{
+  useEffect(() => {
+
     setLocalStorage()
-     const { employees, admin } = getLocalStorage();
 
-            setUserData({employees, admin});
+    const { employees, admin } = getLocalStorage();
 
- },[]);
-    
+    setUserData({ employees, admin });
+
+  }, []);
+
   return (
-    <div>
-      <AuthContext.Provider value={userData}>{children}</AuthContext.Provider>
-    </div>
+    <AuthContext.Provider value={{ userData, setUserData }}>
+      {children}
+    </AuthContext.Provider>
   );
 };
 
 export default AuthProvider;
+    
+  
